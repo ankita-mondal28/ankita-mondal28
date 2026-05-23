@@ -51,4 +51,4 @@
 
 ---
 
-**Connect:** [LinkedIn](https://linkedin.com/in/ankitamondal) • [Email](mailto:your-email@gmail.com)
+**Connect:** [LinkedIn](https://linkedin.com/in/ankitamondal-dev) • [Email](mailto:ankitamondal2801@gmail.com)
