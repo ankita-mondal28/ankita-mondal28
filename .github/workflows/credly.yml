@@ -2,8 +2,8 @@ name: Sync Credly Badges
 
 on:
   schedule:
-    - cron: "0 0 * * 0" 
-  workflow_dispatch: 
+    - cron: "0 0 * * 0" # Runs automatically every Sunday
+  workflow_dispatch: # Manual trigger
 
 jobs:
   update-badges:
@@ -14,13 +14,60 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch and Sync Credly Badges
-        uses: Sagargupta16/credly-badge-readme-action@v1
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          credly-username: "ankita-mondal28" 
-          badge-size: "100"
+          python-version: '3.x'
 
-      - name: Commit Updated README
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Credly Badges
+        run: |
+          python -c '
+          import requests, re
+
+          # Replace with your exact Credly username or ID
+          USERNAME = "ankita-mondal28" 
+          
+          url = f"https://www.credly.com/users/{USERNAME}/badges.json"
+          response = requests.get(url)
+          
+          if response.status_code != 200:
+              print(f"Failed to fetch badges: {response.status_code}")
+              exit(1)
+
+          badges_data = response.json().get("data", [])
+          if not badges_data:
+              print("No badges found or profile is private.")
+              exit(0)
+
+          badge_html = "\n<div align=\"center\">\n"
+          for item in badges_data:
+              badge = item.get("badge_template", {})
+              image_url = badge.get("image_url")
+              badge_name = badge.get("name")
+              badge_id = item.get("id")
+              link = f"https://www.credly.com/badges/{badge_id}/public_url"
+              
+              if image_url:
+                  badge_html += f"  <a href=\"{link}\" target=\"_blank\"><img src=\"{image_url}\" width=\"100\" alt=\"{badge_name}\" title=\"{badge_name}\" style=\"margin: 5px;\" /></a>\n"
+          
+          badge_html += "</div>\n"
+
+          with open("README.md", "r", encoding="utf-8") as f:
+              readme = f.read()
+
+          pattern = r"<!-- CREDLY_BADGES:START -->.*?<!-- CREDLY_BADGES:END -->"
+          replacement = f"<!-- CREDLY_BADGES:START -->\n{badge_html}<!-- CREDLY_BADGES:END -->"
+          
+          updated_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(updated_readme)
+          '
+
+      - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
