@@ -70,6 +70,15 @@
   <h3>✦ CERTIFICATIONS & BADGES ✦</h3>
   
   <!-- CREDLY_BADGES:START -->
-  <!-- CREDLY_BADGES:END -->
+
+<div align="center">
+  <a href="https://www.credly.com/badges/7e70e8d9-0a63-4b82-ac4d-ceed2c060b61/public_url" target="_blank"><img src="https://images.credly.com/images/c07b49a7-c295-4e2a-9557-09c22032e3ae/image.png" width="100" alt="Monitor and Manage Google Cloud Resources Skill Badge" title="Monitor and Manage Google Cloud Resources Skill Badge" style="margin: 5px;" /></a>
+  <a href="https://www.credly.com/badges/817f2e43-944b-4416-800c-da22adb698a9/public_url" target="_blank"><img src="https://images.credly.com/images/b18154fb-9bd3-47e5-a6f1-554be512947d/image.png" width="100" alt="Build Infrastructure with Terraform on Google Cloud Skill Badge" title="Build Infrastructure with Terraform on Google Cloud Skill Badge" style="margin: 5px;" /></a>
+  <a href="https://www.credly.com/badges/bcbf45f7-cdf5-450a-acb9-0a3a4c230ead/public_url" target="_blank"><img src="https://images.credly.com/images/dd932e71-6255-4c38-b873-7c2f6a44c1f6/blob" width="100" alt="Secure Software Delivery Skill Badge" title="Secure Software Delivery Skill Badge" style="margin: 5px;" /></a>
+  <a href="https://www.credly.com/badges/ce44e2a7-5f21-4c26-89f1-eeeb44fec727/public_url" target="_blank"><img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" width="100" alt="AWS Educate Introduction to Generative AI - Training Badge" title="AWS Educate Introduction to Generative AI - Training Badge" style="margin: 5px;" /></a>
+  <a href="https://www.credly.com/badges/2de6b021-5059-4ce2-85ae-366fa524357b/public_url" target="_blank"><img src="https://images.credly.com/images/73c08e76-eb9c-4c03-92da-3dad49e99e5a/Getting_Started_With_Artificial_Intelligence_Badge.png" width="100" alt="Getting Started with Artificial Intelligence" title="Getting Started with Artificial Intelligence" style="margin: 5px;" /></a>
+  <a href="https://www.credly.com/badges/625449ed-aa51-45b6-b772-38d5c0d7bb1f/public_url" target="_blank"><img src="https://images.credly.com/images/ea3eec65-ddad-4242-9c59-1defac0fa2d9/image.png" width="100" alt="Google AI Essentials V1" title="Google AI Essentials V1" style="margin: 5px;" /></a>
+</div>
+<!-- CREDLY_BADGES:END -->
 
 </div>
