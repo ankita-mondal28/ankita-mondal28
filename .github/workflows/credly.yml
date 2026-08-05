@@ -1,0 +1,31 @@
+name: Sync Credly Badges
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" 
+  workflow_dispatch: 
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch and Sync Credly Badges
+        uses: Sagargupta16/credly-badge-readme-action@v1
+        with:
+          credly-username: "ankita-mondal28" 
+          badge-size: "100"
+
+      - name: Commit Updated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-sync Credly badges"
+            git push
+          fi
