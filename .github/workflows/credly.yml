@@ -27,7 +27,6 @@ jobs:
           python -c '
           import requests, re
 
-          # Replace with your exact Credly username or ID
           USERNAME = "ankita-mondal28" 
           
           url = f"https://www.credly.com/users/{USERNAME}/badges.json"
@@ -45,13 +44,20 @@ jobs:
           badge_html = "\n<div align=\"center\">\n"
           for item in badges_data:
               badge = item.get("badge_template", {})
-              image_url = badge.get("image_url")
-              badge_name = badge.get("name")
+              
+              # Pull direct image URL or template image fallback
+              image_url = badge.get("image_url") or (badge.get("image", {}) if isinstance(badge.get("image"), dict) else {}).get("url")
+              
+              # Ensure standard HTTPS link format
+              if image_url and not image_url.startswith("http"):
+                  image_url = f"https:{image_url}"
+
+              badge_name = badge.get("name", "Badge")
               badge_id = item.get("id")
               link = f"https://www.credly.com/badges/{badge_id}/public_url"
               
               if image_url:
-                  badge_html += f"  <a href=\"{link}\" target=\"_blank\"><img src=\"{image_url}\" width=\"100\" alt=\"{badge_name}\" title=\"{badge_name}\" style=\"margin: 5px;\" /></a>\n"
+                  badge_html += f"  <a href=\"{link}\" target=\"_blank\"><img src=\"{image_url}\" width=\"100\" height=\"100\" alt=\"{badge_name}\" title=\"{badge_name}\" style=\"margin: 5px; object-fit: contain;\" /></a>\n"
           
           badge_html += "</div>\n"
 
