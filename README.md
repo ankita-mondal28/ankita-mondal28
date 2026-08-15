@@ -6,7 +6,7 @@
   </a>
 
   <p align="center">
-    <b>BCA Student @ Sister Nivedita University</b> • <i>Building production-grade systems with spatial aesthetic</i>
+    <i>Building production-grade systems with spatial aesthetic</i>
   </p>
 
   <!-- Clean Pill Badges -->
@@ -14,7 +14,7 @@
   <a href="mailto:ankitamondal2801@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://leetcode.com/ankita_m07"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
 
-  <br/><br/>
+  <br/>
 <!-- TECH STACK & SKILLS -->
 
 <h3 align="center">✦ TECH MATRIX ✦</h3>
@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 
-  <br/><br/>
+  <br/>
 
   <!-- Frontend & Design -->
   <p><b>Frontend & Spatial Motion</b></p>
@@ -37,7 +37,7 @@
   <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black" alt="GSAP" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 
-  <br/><br/>
+  <br/>
 
   <!-- Backend & Database -->
   <p><b>Backend & Infrastructure</b></p>
@@ -46,7 +46,7 @@
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
 
-  <br/><br/>
+  <br/>
 
   <!-- AI & Data Science -->
   <p><b>AI, Machine Learning & Analytics</b></p>
@@ -55,7 +55,7 @@
   <img src="https://img.shields.io/badge/Groq_API-F34F29?style=for-the-badge&logo=lightning&logoColor=white" alt="Groq API" />
   <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js" />
 
-  <br/><br/>
+  <br/>
 
   <!-- Tools & Workflow -->
   <p><b>Workflow & Tooling</b></p>
